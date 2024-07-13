@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import logo from "./assets/img/logo.svg";
 import main from "./App.css";
+import SlidesWrapper from "./components/SlidesWrapper";
 
 function App() {
   return (
@@ -97,62 +98,7 @@ function App() {
           <div class="header-bottom"></div>
         </div>
       </div>
-
-      <Swiper>
-        <div className="swiper-wrapper">
-          <div className="swiper-slide slider__item">
-            <div
-              className="slider__layer"
-              data-swiper-parallax="35%"
-              // style="background-image: url(img/slides/slide-1-layer-back.jpg);"
-            ></div>
-            <div
-              className="slider__layer"
-              data-swiper-parallax="25%"
-              // style="background-image: url(img/slides/slide-1-layer-middle.png);"
-            ></div>
-            <div
-              className="slider__layer"
-              data-swiper-parallax="14%"
-              // style="background-image: url(img/slides/slide-1-layer-front.png);"
-            ></div>
-          </div>
-          <div className="swiper-slide slider__item">
-            <div
-              className="slider__layer"
-              data-swiper-parallax="35%"
-              // style="background-image: url(img/slides/slide-2-layer-back.jpg);"
-            ></div>
-            <div
-              className="slider__layer"
-              data-swiper-parallax="25%"
-              // style="background-image: url(img/slides/slide-2-layer-middle.png);"
-            ></div>
-            <div
-              className="slider__layer"
-              data-swiper-parallax="14%"
-              // style="background-image: url(img/slides/slide-2-layer-front.png);"
-            ></div>
-          </div>
-          <div className="swiper-slide slider__item">
-            <div
-              className="slider__layer"
-              data-swiper-parallax="35%"
-              // style="background-image: url(img/slides/slide-3-layer-back.jpg);"
-            ></div>
-            <div
-              className="slider__layer"
-              data-swiper-parallax="25%"
-              // style="background-image: url(img/slides/slide-3-layer-middle.png);"
-            ></div>
-            <div
-              className="slider__layer"
-              data-swiper-parallax="14%"
-              // style="background-image: url(img/slides/slide-3-layer-front.png);"
-            ></div>
-          </div>
-        </div>
-      </Swiper>
+      <SlidesWrapper />
     </div>
   );
 }
