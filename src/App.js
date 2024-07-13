@@ -1,8 +1,15 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
 import logo from "./assets/img/logo.svg";
+import main from "./App.css";
 
 function App() {
   return (
-    <div className="swiper slider">
+    <Swiper
+      className={main}
+      // className="swiper slider"
+    >
       <div className="slider-ui">
         <div className="container header-wrapper">
           <div className="top-line">
@@ -144,7 +151,7 @@ function App() {
           ></div>
         </div>
       </div>
-    </div>
+    </Swiper>
   );
 }
 
