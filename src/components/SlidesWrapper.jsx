@@ -2,9 +2,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
+import img1 from "../assets/img/slides/slide-1-layer-back.jpg";
 
 const initSlides = [
-  { id: 1, paralaxData: "35%", url: "img/slides/slide-1-layer-back.jpg" },
+  { id: 1, paralaxData: "35%", url: img1 },
   { id: 2, paralaxData: "25%", url: "img/slides/slide-1-layer-middle.png" },
   { id: 3, paralaxData: "14%", url: "img/slides/slide-1-layer-front.png" },
 ];
@@ -20,7 +21,9 @@ const SlidesWrapper = () => {
                 key={slide.id}
                 className="slider__layer"
                 data-swiper-parallax={slide.paralaxData}
-                // style="background-image: url(img/slides/slide-1-layer-back.jpg);"
+                style={{
+                  backgroundImage: "url()",
+                }}
               ></div>
             );
           })}
