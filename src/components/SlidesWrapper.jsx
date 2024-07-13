@@ -14,21 +14,16 @@ const SlidesWrapper = () => {
     <Swiper>
       <div className="swiper-wrapper">
         <div className="swiper-slide slider__item">
-          <div
-            className="slider__layer"
-            data-swiper-parallax="35%"
-            // style="background-image: url(img/slides/slide-1-layer-back.jpg);"
-          ></div>
-          <div
-            className="slider__layer"
-            data-swiper-parallax="25%"
-            // style="background-image: url(img/slides/slide-1-layer-middle.png);"
-          ></div>
-          <div
-            className="slider__layer"
-            data-swiper-parallax="14%"
-            // style="background-image: url(img/slides/slide-1-layer-front.png);"
-          ></div>
+          {initSlides.map((slide, index) => {
+            return (
+              <div
+                key={slide.id}
+                className="slider__layer"
+                data-swiper-parallax={slide.paralaxData}
+                // style="background-image: url(img/slides/slide-1-layer-back.jpg);"
+              ></div>
+            );
+          })}
         </div>
         <div className="swiper-slide slider__item">
           <div
